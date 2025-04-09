@@ -1,0 +1,185 @@
+body {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    font-family: 'Varela Round', sans-serif;
+    font-size: 110%;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 6rem;
+    animation: space-background 240s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes space-background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 5px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 4px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    z-index: -1;
+}
+.flex-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+}
+@media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+  
+
+.earth {
+    flex: 1;
+    align-items: center;
+    min-width: 329px;
+    min-height: 329px;
+    background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+    border-radius: 50%;
+    background-size: 710px;
+    box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+    animation-name: rotate;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 610px 0px;
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 610px 0px;
+    }
+}
+
+.card {
+    flex: 1;
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 27px;
+    min-width: 300px;
+    margin: 1em;
+    width: 340px;
+
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: centre;
+
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    width: 43.3px;
+    border: none;
+    cursor: pointer;
+    height: 43.3px;
+    background: #7c7c7c2b;
+    color: white;
+    transition: 0.2s ease-in-out;
+    outline: none;
+}
+
+input.search-bar {
+    border: none;
+    padding: 0.5em 0.9em;
+    font-family: inherit;
+    background: #7c7c7c2b;
+    color: white;
+    font-size: 111%;
+    border-radius: 21px;
+    outline: none;
+    /* width: calc(100%-50px); */
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+h1.temp {
+    margin-bottom: 6px;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    clear: both;
+    position: absolute;
+    right: 0;
+    color: white;
+    font-weight: 200;
+    /* margin-left: 10px; */
+    /* align-items: center; */
+    left: 0;
+    bottom: 0;
+    /* width: 100%; */
+    /* height: auto; */
+    text-align: center;
+    /* margin-bottom: 15px; */
+    padding: 1rem;
+}
+section.footer {
+    /* margin-bottom: -180px; */
+    padding-top: 20px;
+    /* position: absolute; */
+}
+div.id{
+    padding: 2px;
+}
+a.social{
+    margin-left: 10px;
+    cursor: pointer;
+} 
+.a:hover{
+    color: white;
+}
